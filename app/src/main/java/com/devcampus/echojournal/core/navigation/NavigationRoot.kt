@@ -10,39 +10,25 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.scaleIn
 import androidx.compose.animation.scaleOut
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.calculateEndPadding
-import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.IntSize
-import androidx.compose.ui.unit.LayoutDirection
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.devcampus.echojournal.presentation.screens.create_record.CreateRecordScreenRoot
 import com.devcampus.echojournal.presentation.screens.entry_list.EntryListScreenRoot
-import kotlinx.serialization.Serializable
 
 @Composable
-fun NavigationRoot(innerPadding: PaddingValues) {
+fun NavigationRoot(modifier: Modifier = Modifier) {
 
     val navController = rememberNavController()
 
     NavHost(
         navController = navController,
         startDestination = Destinations.EntryList,
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(
-                PaddingValues(
-                    bottom = innerPadding.calculateBottomPadding(),
-                    start = innerPadding.calculateStartPadding(LayoutDirection.Ltr),
-                    end = innerPadding.calculateEndPadding(LayoutDirection.Ltr)
-                )
-            )
+        modifier = modifier.fillMaxSize()
     ) {
         composable<Destinations.EntryList>(
             enterTransition = {
