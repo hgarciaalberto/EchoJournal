@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.App.Starting" parent="Theme.SplashScreen.IconBackground">
+    <!--        <item name="android:windowSplashScreenIconBackgroundColor">@color/colorSplash</item>-->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/colorSplash</item>
-        <item name="android:windowSplashScreenIconBackgroundColor">@color/colorSplash</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
         <item name="postSplashScreenTheme">@style/Theme.EchoJournal</item>
         <item name="android:actionBarTheme">@style/Theme.EchoJournal</item>
