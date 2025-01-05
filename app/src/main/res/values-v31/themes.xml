@@ -2,12 +2,10 @@
 <resources>
 
     <style name="Theme.App.Starting" parent="Theme.SplashScreen.IconBackground">
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
         <item name="windowSplashScreenBackground">@color/colorSplash</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/colorSplash</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
         <item name="postSplashScreenTheme">@style/Theme.EchoJournal</item>
         <item name="android:actionBarTheme">@style/Theme.EchoJournal</item>
     </style>
-
-    <style name="Theme.EchoJournal" parent="android:Theme.Material.Light.NoActionBar" />
-
 </resources>
