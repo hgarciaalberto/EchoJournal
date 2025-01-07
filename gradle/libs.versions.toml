@@ -32,6 +32,8 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts" }
+
 #junit
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 #koin
@@ -50,6 +52,7 @@ compose = [
     "androidx-ui-tooling",
     "androidx-ui-tooling-preview",
     "androidx-material3",
+    "androidx-ui-text-google-fonts",
 ]
 
 koin-compose = ["koin-core", "koin-android", "koin-android-workmanager", "koin-androidx-compose"]
