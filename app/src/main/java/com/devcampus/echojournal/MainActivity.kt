@@ -11,14 +11,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.devcampus.echojournal.core.extensions.linearGradient
 import com.devcampus.echojournal.core.navigation.NavigationRoot
 import com.devcampus.echojournal.ui.theme.EchoJournalTheme
 import com.devcampus.echojournal.ui.theme.ExtendedTheme
-//import com.devcampus.echojournal.ui.theme.ExtendedTheme
 import org.koin.compose.KoinContext
 
 class MainActivity : ComponentActivity() {
@@ -31,7 +29,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             KoinContext {
-                EchoJournalTheme {
+                EchoJournalTheme(darkTheme = false) {
                     Scaffold(
                         containerColor = MaterialTheme.colorScheme.background,
                         contentColor = MaterialTheme.colorScheme.onBackground,
